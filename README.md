@@ -17,9 +17,9 @@ second, go to the root of your repository, and clone this repo
 ### _the 3rd argument must be an integer_
 #### argument 3 indecate weather you want to ```save the test_set``` used or ```use already exesting test_set```  
 
-##### if it's positive then it saves the test_set to the file named "```test_set_(argument 3)\_for\_(argument 2)```"  
+#### if it's positive then it saves the test_set to the file named "```test_set_(argument 3)\_for\_(argument 2)```"  
 
-##### if it's negative then it use the test_set in the file named "```test_set_(argument 3)\_for\_(argument 2)```"  
+#### if it's negative then it use the test_set in the file named "```test_set_(argument 3)\_for\_(argument 2)```"  
 
 ## for example
 
