@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 RESET="\033[0m"
 BLACK="\033[30m"
@@ -86,24 +86,24 @@ function test_push_from
 function test_all()
 {
 	echo "<=======================> start $2 number <=================>"
-	if [ $# -eq 2 ]
+	if [ $# == 2 ]
 	then
 		test_push $1 $2
 	fi
 
-	if [ $3 -gt 0 ]
+	if [ $3 > 0 ]
 	then
 		test_push_save $1 $2 $3
 	fi
 
-	if [ $3 -lt 0 ]
+	if [ $3 < 0 ]
 	then
 		test_push_from $1 $2 $3
 	fi
 	echo "<=======================> end $2 number <===================>"
 }
 
-if [ $# -eq 3 ] && [ $3 -lt 0 ]
+if [ $# == 3 ] && [ $3 < 0 ]
 then
 	file=$(echo -"($3)" | bc -l | cat)
 	if [ ! -f "test_sets/test_set_${file}_for_$2" ]
@@ -113,12 +113,12 @@ then
 	fi
 fi
 
-if [ $# -eq 3 ] && [ $3 -ne 0 ]
+if [ $# == 3 ] && [ $3 != 0 ]
 then
 	ALL=$(test_all $1 $2 $3 | cat)
 fi
 
-if [ $# -eq 2 ] || [ $3 -eq 0 ]
+if [ $# == 2 ] || [ $3 == 0 ]
 then
 	ALL=$(test_all $1 $2 | cat)
 fi
