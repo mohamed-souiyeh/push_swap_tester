@@ -1,15 +1,14 @@
 # push_swap_tester 2.0 - to help you while you are coding it.
 ## Prerequisites
 
+### ```this is an improved version to help not in just testing, but in optimizing the algorithm too.```
+
 first, install check_mac the root of your repository, which is where we can find your Makefile
 
 second, go to the root of your repository, and clone this repo
 
 ```git@github.com:mohamed-souiyeh/push_swap_tester.git```
-
-then clone the tester alongside it  
-### this is an improved version to help not in just testing, but in optimizing the algorithm too.
-
+  
 ## how to use it
 
 #### argument 1 is how many tests you want  
