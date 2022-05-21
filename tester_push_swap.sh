@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 RESET="\033[0m"
 BLACK="\033[30m"
@@ -14,7 +14,10 @@ WHITE="\033[37m"
 #g ../push_swap.c
 cp ../push_swap .
 cp ../checker_Mac .
-
+if ! [ -e ./test_sets/ ];
+then
+	mkdir test_sets
+fi
 function push_swap()
 {
 	TEST1=$(./push_swap $@ | ./checker_Mac $@)
@@ -86,39 +89,38 @@ function test_push_from
 function test_all()
 {
 	echo "<=======================> start $2 number <=================>"
-	if [ $# == 2 ]
+	if [ $# -eq 2 ]
 	then
 		test_push $1 $2
 	fi
 
-	if [ $3 > 0 ]
+	if [ $3 -gt 0 ]
 	then
 		test_push_save $1 $2 $3
 	fi
 
-	if [ $3 < 0 ]
+	if [ $3 -lt 0 ]
 	then
 		test_push_from $1 $2 $3
+		exit 0
 	fi
 	echo "<=======================> end $2 number <===================>"
 }
 
-if [ $# == 3 ] && [ $3 < 0 ]
+if [ $# -eq 3 ] && [ $3 -lt 0 ]
 then
 	file=$(echo -"($3)" | bc -l | cat)
-	if [ ! -f "test_sets/test_set_${file}_for_$2" ]
+	if ! [ -f ./test_sets/test_set_${file}_for_$2 ];
 	then
 		echo "the file: test_sets/test_set_${file}_for_$2 doesn't exist."
 		exit 1
 	fi
 fi
 
-if [ $# == 3 ] && [ $3 != 0 ]
+if [ $# -eq 3 ] && [ $3 -ne 0 ]
 then
 	ALL=$(test_all $1 $2 $3 | cat)
-fi
-
-if [ $# == 2 ] || [ $3 == 0 ]
+elif [ $# -eq 2 ] || [ $3 -eq 0 ]
 then
 	ALL=$(test_all $1 $2 | cat)
 fi
