@@ -1,4 +1,4 @@
-# push_swap_tester
+# push_swap_tester 2.0
 ## Prerequisites
 
 install check_mac inside your push_swap working directory  
