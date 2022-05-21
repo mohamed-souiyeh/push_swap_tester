@@ -1,5 +1,7 @@
 # push_swap_tester
-## install check_mac inside your push_swap working directory and then clone the tester there too
+## Prerequisites
+install check_mac inside your push_swap working directory
+then clone the tester alongside it
 ## push_swap
 ### this is an improved version to help not in just testing, but in optimizing the algorithm too.
 
