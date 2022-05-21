@@ -1,7 +1,7 @@
 # push_swap_tester 2.0 - to help you while you are coding it.
 ## Prerequisites
 
-### ```this is an improved version to help not in just testing, but in optimizing the algorithm too.```
+##### ```this is an improved version to help not in just testing, but in optimizing the algorithm too.```
 
 first, install check_mac the root of your repository, which is where we can find your Makefile
 
