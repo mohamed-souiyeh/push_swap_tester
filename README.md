@@ -13,10 +13,10 @@ then clone the tester alongside it
 example ==> ./tester_push_swap 50 5  
 
 ### the third argument must be an integer
-#### argument 3 indecate weather you want to save the test_set used or use already exesting one
-if it's positive then it saves the test_set to the file named "test_set_(argument 3)_for_(argument 2)"
-
-if it's negative then it use the test_set in the file named "test_set_(argument 3)_for_(argument 2)"
+#### argument 3 indecate weather you want to save the test_set used or use already exesting one  
+##### if it's positive then it saves the test_set to the file named "test_set_(argument 3)_for_(argument 2)"  
+  
+##### if it's negative then it use the test_set in the file named "test_set_(argument 3)_for_(argument 2)"  
 
 example ==> ./tester_push_swap 50 5 1 -> it will save the test_set in test_sets/test_set_1_for_5  
 
